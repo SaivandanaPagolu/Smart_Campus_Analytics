@@ -1,0 +1,46 @@
+# ============================================================
+#  AI-Powered Smart Campus Analytics System
+#  Requirements File
+#  Project: IEEE Research — Student & Resource Management
+#  SDGs: 4 (Quality Education) · 9 (Innovation) · 10 (Equity) · 11 (Sustainability)
+# ============================================================
+#
+#  IMPORTANT: These versions are PINNED to exactly match the environment
+#  the models in models/*.pkl were trained with. Do NOT loosen these to
+#  ">=" for scikit-learn / numpy / pandas / joblib / scipy — a version
+#  mismatch between training and deployment is what breaks pickle loading
+#  on Streamlit Cloud (RuntimeError: Could not load models/*.pkl).
+#  If you retrain the models with different versions, update these to match.
+
+# ── Core Data Science (PINNED — must match training env) ──────
+pandas==3.0.2
+numpy==2.4.4
+scipy==1.17.1
+
+# ── Machine Learning (PINNED — must match training env) ───────
+scikit-learn==1.8.0
+joblib==1.5.3
+
+# ── Visualization (Notebook) ─────────────────────────────────
+matplotlib>=3.6.0
+seaborn>=0.12.0
+
+# ── Dashboard (Streamlit App) ────────────────────────────────
+# Pinned: Streamlit's internal BaseWeb component class names can change
+# between versions, which can silently break custom CSS selectors that
+# target them (e.g. the sidebar navigation box going white-on-white).
+streamlit==1.59.2
+plotly>=5.15.0
+
+# ── AI / NLP Chatbot ─────────────────────────────────────────
+groq>=0.4.0
+
+# ── Database Connectivity (MySQL) ─────────────────────────────
+mysql-connector-python>=8.0.33
+
+# ── Jupyter Notebook ─────────────────────────────────────────
+notebook>=6.5.0
+ipykernel>=6.0.0
+
+# ── Utilities ────────────────────────────────────────────────
+python-dotenv>=1.0.0
