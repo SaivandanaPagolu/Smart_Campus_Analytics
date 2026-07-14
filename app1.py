@@ -1955,7 +1955,7 @@ def build_sidebar(s, f, c):
         ])
 
         st.markdown("---")
-        st.markdown('<div style="font-size:11px;color:#90caf9;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🎛️ FILTERS</div>', unsafe_allow_html=True)
+        st.markdown('<div style="font-size:11px;color:black;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🎛️ FILTERS</div>', unsafe_allow_html=True)
 
         departments = sorted(s["department"].unique().tolist())
         sel_depts   = st.multiselect("🏛️ Department", departments)
