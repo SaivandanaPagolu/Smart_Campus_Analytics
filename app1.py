@@ -1012,10 +1012,10 @@ def page_attendance(s):
 
     section("📉 ATTENDANCE vs GPA — YEAR-WISE TREND")
     fig3 = px.scatter(s.sample(min(len(s),2000), random_state=1),
-                      x="attendance_percentage", y="current_gpa",
-                      color="year_of_study", facet_col="year_of_study",
-                      color_discrete_sequence=COLORS, trendline="ols",
-                      labels={"attendance_percentage":"Attendance %","current_gpa":"GPA","year_of_study":"Year"})
+                   x="attendance_percentage", y="current_gpa",
+                   color="year_of_study", facet_col="year_of_study",
+                   color_discrete_sequence=COLORS,
+                   labels={"attendance_percentage":"Attendance %","current_gpa":"GPA","year_of_study":"Year"})
     fig3.update_layout(**LIGHT_LAYOUT, height=320)
     st.plotly_chart(fig3, use_container_width=True)
 
